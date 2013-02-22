@@ -86,16 +86,13 @@ Developers are strongly encouraged to use variant metadata wherever possible. Me
 
 ## Recording conversions
 
-Conversions can be recorded via the experiment object using the variant or its ID:
+Conversions can be recorded via the variant object:
 
-    expt.recordConversion(variant);
+    variant.recordConversion();
 
-    expt.recordConversion(variant.id);
+An optional second argument can be added to specify a "reward amount" between 0 and 1:
 
-An optional second argument can be added to specify a "reward amount" between
-0 and 1:
-
-    expt.recordConversion(variant.id, 0.8);
+    variant.recordConversion(0.8);
 
 Results are queued for asynchronous transmission to the Myna servers in the background.
 
