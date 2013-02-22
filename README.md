@@ -2,9 +2,11 @@
 
 This document describes forthcoming mobile client libraries for Myna. The same basic template will be used for client libraries for iOS, Android, and HTML 5 mobile apps.
 
+This is a work-in-progress and we welcome feedback. Please send feedback opening an issue on Github or emailing us at hello@mynaweb.com.
+
 The main purpose of these libraries is to abstract away the problems of communication with the Myna servers. The client libraries will download experiment data and cache it on the device. Tests will be run locally without the need for constant communication with the Myna servers. Test results will be synced back to the servers as and when a network connection is available.
 
-The examples below are written using Javascript pseudocode. The native client libraries for Android and iOS will follow a similar pattern in Java and Objective C respetively.
+The examples below are written using Javascript pseudocode. The native client libraries for Android and iOS will follow a similar pattern in Java and Objective C respectively.
 
 **Note for existing Myna users:** These clients will use a new version of the Myna API, documentation for which can be found on [Apiary](http://docs.mynaweb.apiary.io).
 
@@ -63,7 +65,7 @@ Each variant has an *ID* and a set of JSON-like *metadata* that the developer ca
 
     // Determining a button colour programatically using the variant ID:
 
-    var buttonColor  "gold";
+    var buttonColor = "gold";
     id(variant.id == "variant1") {
         buttonColor = "red";
     } else if(variant.id == "variant2") {
